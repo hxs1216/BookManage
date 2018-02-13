@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_sys_dictionary" >
+  <resultMap id="BaseResultMap" class="com.biyao.system.model.SysDictionary" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="cfg_type" property="cfgType" jdbcType="VARCHAR" />
+    <result column="cfg_value" property="cfgValue" jdbcType="VARCHAR" />
+    <result column="cfg_value_id" property="cfgValueId" jdbcType="VARCHAR" />
+    <result column="parent" property="parent" jdbcType="INTEGER" />
+    <result column="enable" property="enable" jdbcType="INTEGER" />
+    <result column="priority" property="priority" jdbcType="INTEGER" />
+    <result column="is_edit" property="isEdit" jdbcType="INTEGER" />
+    <result column="system_id" property="systemId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="t_sys_dictionary.Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$ #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <sql id="t_sys_dictionary.mysql_Pagination_Limit" >
+    <dynamic >
+      <isNotEmpty property="mysqlOffset" >
+        <isNotEmpty property="mysqlLength" >
+          <![CDATA[ limit #mysqlOffset# , #mysqlLength# ]]>
+        </isNotEmpty>
+      </isNotEmpty>
+    </dynamic>
+  </sql>
+  <sql id="t_sys_dictionary.Base_Column_List" >
+    id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id
+  </sql>
+  <select id="t_sys_dictionary.selectByExample" resultMap="BaseResultMap" parameterClass="com.biyao.system.model.SysDictionaryExample" >
+    select
+    <isParameterPresent >
+      <isEqual property="distinct" compareValue="true" >
+        distinct
+      </isEqual>
+    </isParameterPresent>
+    <include refid="t_sys_dictionary.Base_Column_List" />
+    from t_sys_dictionary
+    <isParameterPresent >
+      <include refid="t_sys_dictionary.Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+    <include refid="t_sys_dictionary.mysql_Pagination_Limit" />
+  </select>
+  <select id="t_sys_dictionary.selectByPrimaryKey" resultMap="BaseResultMap" parameterClass="com.biyao.system.model.SysDictionary" >
+    select 
+    <include refid="t_sys_dictionary.Base_Column_List" />
+    from t_sys_dictionary
+    where id = #id:INTEGER#
+  </select>
+  <delete id="t_sys_dictionary.deleteByPrimaryKey" parameterClass="com.biyao.system.model.SysDictionary" >
+    delete from t_sys_dictionary
+    where id = #id:INTEGER#
+  </delete>
+  <delete id="t_sys_dictionary.deleteByExample" parameterClass="com.biyao.system.model.SysDictionaryExample" >
+    delete from t_sys_dictionary
+    <include refid="t_sys_dictionary.Example_Where_Clause" />
+  </delete>
+  <insert id="t_sys_dictionary.insert" parameterClass="com.biyao.system.model.SysDictionary" >
+    insert into t_sys_dictionary (id, cfg_type, cfg_value, cfg_value_id, 
+      parent, enable, priority, is_edit, system_id
+      )
+    values (#id:INTEGER#, #cfgType:VARCHAR#, #cfgValue:VARCHAR#, #cfgValueId:VARCHAR#, 
+      #parent:INTEGER#, #enable:INTEGER#, #priority:INTEGER#, #isEdit:INTEGER#, #systemId:VARCHAR#
+      )
+  </insert>
+  <insert id="t_sys_dictionary.insertSelective" parameterClass="com.biyao.system.model.SysDictionary" >
+    insert into t_sys_dictionary
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="cfgType" >
+        cfg_type
+      </isNotNull>
+      <isNotNull prepend="," property="cfgValue" >
+        cfg_value
+      </isNotNull>
+      <isNotNull prepend="," property="cfgValueId" >
+        cfg_value_id
+      </isNotNull>
+      <isNotNull prepend="," property="parent" >
+        parent
+      </isNotNull>
+      <isNotNull prepend="," property="enable" >
+        enable
+      </isNotNull>
+      <isNotNull prepend="," property="priority" >
+        priority
+      </isNotNull>
+      <isNotNull prepend="," property="isEdit" >
+        is_edit
+      </isNotNull>
+      <isNotNull prepend="," property="systemId" >
+        system_id
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="cfgType" >
+        #cfgType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="cfgValue" >
+        #cfgValue:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="cfgValueId" >
+        #cfgValueId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="parent" >
+        #parent:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="enable" >
+        #enable:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="priority" >
+        #priority:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="isEdit" >
+        #isEdit:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="systemId" >
+        #systemId:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="t_sys_dictionary.countByExample" parameterClass="com.biyao.system.model.SysDictionaryExample" resultClass="java.lang.Integer" >
+    select count(*) from t_sys_dictionary
+    <include refid="t_sys_dictionary.Example_Where_Clause" />
+  </select>
+  <update id="t_sys_dictionary.updateByExampleSelective" >
+    update t_sys_dictionary
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.cfgType" >
+        cfg_type = #record.cfgType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.cfgValue" >
+        cfg_value = #record.cfgValue:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.cfgValueId" >
+        cfg_value_id = #record.cfgValueId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.parent" >
+        parent = #record.parent:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.enable" >
+        enable = #record.enable:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.priority" >
+        priority = #record.priority:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.isEdit" >
+        is_edit = #record.isEdit:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.systemId" >
+        system_id = #record.systemId:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_sys_dictionary.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_sys_dictionary.updateByExample" >
+    update t_sys_dictionary
+    set id = #record.id:INTEGER#,
+      cfg_type = #record.cfgType:VARCHAR#,
+      cfg_value = #record.cfgValue:VARCHAR#,
+      cfg_value_id = #record.cfgValueId:VARCHAR#,
+      parent = #record.parent:INTEGER#,
+      enable = #record.enable:INTEGER#,
+      priority = #record.priority:INTEGER#,
+      is_edit = #record.isEdit:INTEGER#,
+      system_id = #record.systemId:VARCHAR#
+    <isParameterPresent >
+      <include refid="t_sys_dictionary.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_sys_dictionary.updateByPrimaryKeySelective" parameterClass="com.biyao.system.model.SysDictionary" >
+    update t_sys_dictionary
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="cfgType" >
+        cfg_type = #cfgType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="cfgValue" >
+        cfg_value = #cfgValue:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="cfgValueId" >
+        cfg_value_id = #cfgValueId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="parent" >
+        parent = #parent:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="enable" >
+        enable = #enable:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="priority" >
+        priority = #priority:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="isEdit" >
+        is_edit = #isEdit:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="systemId" >
+        system_id = #systemId:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:INTEGER#
+  </update>
+  <update id="t_sys_dictionary.updateByPrimaryKey" parameterClass="com.biyao.system.model.SysDictionary" >
+    update t_sys_dictionary
+    set cfg_type = #cfgType:VARCHAR#,
+      cfg_value = #cfgValue:VARCHAR#,
+      cfg_value_id = #cfgValueId:VARCHAR#,
+      parent = #parent:INTEGER#,
+      enable = #enable:INTEGER#,
+      priority = #priority:INTEGER#,
+      is_edit = #isEdit:INTEGER#,
+      system_id = #systemId:VARCHAR#
+    where id = #id:INTEGER#
+  </update>
+</sqlMap>

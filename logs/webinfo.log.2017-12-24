@@ -1,0 +1,250 @@
+[BookManager] 2017-12-24 23:41:28131 ? DEBUG -0    java.sql.Connection - {conn-100000} Connection
+[BookManager] 2017-12-24 23:41:28148 ? DEBUG -17   java.sql.Connection - {conn-100000} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:41:28515 ? DEBUG -384  java.sql.PreparedStatement - {pstm-100001} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:41:28515 ? DEBUG -384  java.sql.PreparedStatement - {pstm-100001} Parameters: []
+[BookManager] 2017-12-24 23:41:28515 ? DEBUG -384  java.sql.PreparedStatement - {pstm-100001} Types: []
+[BookManager] 2017-12-24 23:42:46704 ? DEBUG -78573 java.sql.Connection - {conn-100003} Connection
+[BookManager] 2017-12-24 23:42:46706 ? DEBUG -78575 java.sql.Connection - {conn-100003} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:42:46707 ? DEBUG -78576 java.sql.PreparedStatement - {pstm-100004} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:42:46708 ? DEBUG -78577 java.sql.PreparedStatement - {pstm-100004} Parameters: []
+[BookManager] 2017-12-24 23:42:46708 ? DEBUG -78577 java.sql.PreparedStatement - {pstm-100004} Types: []
+[BookManager] 2017-12-24 23:42:48186 ? DEBUG -80055 java.sql.Connection - {conn-100006} Connection
+[BookManager] 2017-12-24 23:42:48187 ? DEBUG -80056 java.sql.Connection - {conn-100006} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:42:48187 ? DEBUG -80056 java.sql.PreparedStatement - {pstm-100007} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:42:48187 ? DEBUG -80056 java.sql.PreparedStatement - {pstm-100007} Parameters: []
+[BookManager] 2017-12-24 23:42:48187 ? DEBUG -80056 java.sql.PreparedStatement - {pstm-100007} Types: []
+[BookManager] 2017-12-24 23:43:13551 ? DEBUG -105420 java.sql.Connection - {conn-100009} Connection
+[BookManager] 2017-12-24 23:43:13552 ? DEBUG -105421 java.sql.Connection - {conn-100009} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:13553 ? DEBUG -105422 java.sql.PreparedStatement - {pstm-100010} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:13553 ? DEBUG -105422 java.sql.PreparedStatement - {pstm-100010} Parameters: []
+[BookManager] 2017-12-24 23:43:13553 ? DEBUG -105422 java.sql.PreparedStatement - {pstm-100010} Types: []
+[BookManager] 2017-12-24 23:43:14617 ? DEBUG -106486 java.sql.Connection - {conn-100012} Connection
+[BookManager] 2017-12-24 23:43:14619 ? DEBUG -106488 java.sql.Connection - {conn-100012} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:14619 ? DEBUG -106488 java.sql.PreparedStatement - {pstm-100013} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:14619 ? DEBUG -106488 java.sql.PreparedStatement - {pstm-100013} Parameters: []
+[BookManager] 2017-12-24 23:43:14619 ? DEBUG -106488 java.sql.PreparedStatement - {pstm-100013} Types: []
+[BookManager] 2017-12-24 23:43:15139 ? DEBUG -107008 java.sql.Connection - {conn-100015} Connection
+[BookManager] 2017-12-24 23:43:15139 ? DEBUG -107008 java.sql.Connection - {conn-100015} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:15140 ? DEBUG -107009 java.sql.PreparedStatement - {pstm-100016} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:15140 ? DEBUG -107009 java.sql.PreparedStatement - {pstm-100016} Parameters: []
+[BookManager] 2017-12-24 23:43:15140 ? DEBUG -107009 java.sql.PreparedStatement - {pstm-100016} Types: []
+[BookManager] 2017-12-24 23:43:15362 ? DEBUG -107231 java.sql.Connection - {conn-100018} Connection
+[BookManager] 2017-12-24 23:43:15364 ? DEBUG -107233 java.sql.Connection - {conn-100018} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:15365 ? DEBUG -107234 java.sql.PreparedStatement - {pstm-100019} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:15365 ? DEBUG -107234 java.sql.PreparedStatement - {pstm-100019} Parameters: []
+[BookManager] 2017-12-24 23:43:15365 ? DEBUG -107234 java.sql.PreparedStatement - {pstm-100019} Types: []
+[BookManager] 2017-12-24 23:43:15565 ? DEBUG -107434 java.sql.Connection - {conn-100021} Connection
+[BookManager] 2017-12-24 23:43:15567 ? DEBUG -107436 java.sql.Connection - {conn-100021} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:15569 ? DEBUG -107438 java.sql.PreparedStatement - {pstm-100022} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:15570 ? DEBUG -107439 java.sql.PreparedStatement - {pstm-100022} Parameters: []
+[BookManager] 2017-12-24 23:43:15570 ? DEBUG -107439 java.sql.PreparedStatement - {pstm-100022} Types: []
+[BookManager] 2017-12-24 23:43:50285 ? DEBUG -142154 java.sql.Connection - {conn-100024} Connection
+[BookManager] 2017-12-24 23:43:50286 ? DEBUG -142155 java.sql.Connection - {conn-100024} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:50286 ? DEBUG -142155 java.sql.PreparedStatement - {pstm-100025} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:50286 ? DEBUG -142155 java.sql.PreparedStatement - {pstm-100025} Parameters: []
+[BookManager] 2017-12-24 23:43:50286 ? DEBUG -142155 java.sql.PreparedStatement - {pstm-100025} Types: []
+[BookManager] 2017-12-24 23:43:51168 ? DEBUG -143037 java.sql.Connection - {conn-100027} Connection
+[BookManager] 2017-12-24 23:43:51168 ? DEBUG -143037 java.sql.Connection - {conn-100027} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:51169 ? DEBUG -143038 java.sql.PreparedStatement - {pstm-100028} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:51169 ? DEBUG -143038 java.sql.PreparedStatement - {pstm-100028} Parameters: []
+[BookManager] 2017-12-24 23:43:51169 ? DEBUG -143038 java.sql.PreparedStatement - {pstm-100028} Types: []
+[BookManager] 2017-12-24 23:43:51383 ? DEBUG -143252 java.sql.Connection - {conn-100030} Connection
+[BookManager] 2017-12-24 23:43:51384 ? DEBUG -143253 java.sql.Connection - {conn-100030} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:51384 ? DEBUG -143253 java.sql.PreparedStatement - {pstm-100031} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:43:51384 ? DEBUG -143253 java.sql.PreparedStatement - {pstm-100031} Parameters: []
+[BookManager] 2017-12-24 23:43:51385 ? DEBUG -143254 java.sql.PreparedStatement - {pstm-100031} Types: []
+[BookManager] 2017-12-24 23:44:13811 ? DEBUG -165680 java.sql.Connection - {conn-100033} Connection
+[BookManager] 2017-12-24 23:44:13812 ? DEBUG -165681 java.sql.Connection - {conn-100033} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:44:13813 ? DEBUG -165682 java.sql.PreparedStatement - {pstm-100034} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:44:13813 ? DEBUG -165682 java.sql.PreparedStatement - {pstm-100034} Parameters: []
+[BookManager] 2017-12-24 23:44:13813 ? DEBUG -165682 java.sql.PreparedStatement - {pstm-100034} Types: []
+[BookManager] 2017-12-24 23:44:35620 ? DEBUG -187489 java.sql.Connection - {conn-100036} Connection
+[BookManager] 2017-12-24 23:44:35620 ? DEBUG -187489 java.sql.Connection - {conn-100036} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:44:35620 ? DEBUG -187489 java.sql.PreparedStatement - {pstm-100037} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:44:35621 ? DEBUG -187490 java.sql.PreparedStatement - {pstm-100037} Parameters: []
+[BookManager] 2017-12-24 23:44:35621 ? DEBUG -187490 java.sql.PreparedStatement - {pstm-100037} Types: []
+[BookManager] 2017-12-24 23:45:08927 ? DEBUG -220796 java.sql.Connection - {conn-100039} Connection
+[BookManager] 2017-12-24 23:45:08927 ? DEBUG -220796 java.sql.Connection - {conn-100039} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:08928 ? DEBUG -220797 java.sql.PreparedStatement - {pstm-100040} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:08928 ? DEBUG -220797 java.sql.PreparedStatement - {pstm-100040} Parameters: []
+[BookManager] 2017-12-24 23:45:08928 ? DEBUG -220797 java.sql.PreparedStatement - {pstm-100040} Types: []
+[BookManager] 2017-12-24 23:45:12598 ? DEBUG -224467 java.sql.Connection - {conn-100042} Connection
+[BookManager] 2017-12-24 23:45:12598 ? DEBUG -224467 java.sql.Connection - {conn-100042} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:12599 ? DEBUG -224468 java.sql.PreparedStatement - {pstm-100043} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:12599 ? DEBUG -224468 java.sql.PreparedStatement - {pstm-100043} Parameters: []
+[BookManager] 2017-12-24 23:45:12599 ? DEBUG -224468 java.sql.PreparedStatement - {pstm-100043} Types: []
+[BookManager] 2017-12-24 23:45:13534 ? DEBUG -225403 java.sql.Connection - {conn-100045} Connection
+[BookManager] 2017-12-24 23:45:13540 ? DEBUG -225409 java.sql.Connection - {conn-100045} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:13542 ? DEBUG -225411 java.sql.PreparedStatement - {pstm-100046} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:13543 ? DEBUG -225412 java.sql.PreparedStatement - {pstm-100046} Parameters: []
+[BookManager] 2017-12-24 23:45:13543 ? DEBUG -225412 java.sql.PreparedStatement - {pstm-100046} Types: []
+[BookManager] 2017-12-24 23:45:140 ? DEBUG -225869 java.sql.Connection - {conn-100048} Connection
+[BookManager] 2017-12-24 23:45:141 ? DEBUG -225870 java.sql.Connection - {conn-100048} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:141 ? DEBUG -225870 java.sql.PreparedStatement - {pstm-100049} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:141 ? DEBUG -225870 java.sql.PreparedStatement - {pstm-100049} Parameters: []
+[BookManager] 2017-12-24 23:45:141 ? DEBUG -225870 java.sql.PreparedStatement - {pstm-100049} Types: []
+[BookManager] 2017-12-24 23:45:14214 ? DEBUG -226083 java.sql.Connection - {conn-100051} Connection
+[BookManager] 2017-12-24 23:45:14214 ? DEBUG -226083 java.sql.Connection - {conn-100051} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:14215 ? DEBUG -226084 java.sql.PreparedStatement - {pstm-100052} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:14215 ? DEBUG -226084 java.sql.PreparedStatement - {pstm-100052} Parameters: []
+[BookManager] 2017-12-24 23:45:14215 ? DEBUG -226084 java.sql.PreparedStatement - {pstm-100052} Types: []
+[BookManager] 2017-12-24 23:45:14411 ? DEBUG -226280 java.sql.Connection - {conn-100054} Connection
+[BookManager] 2017-12-24 23:45:14412 ? DEBUG -226281 java.sql.Connection - {conn-100054} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:14412 ? DEBUG -226281 java.sql.PreparedStatement - {pstm-100055} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:14413 ? DEBUG -226282 java.sql.PreparedStatement - {pstm-100055} Parameters: []
+[BookManager] 2017-12-24 23:45:14413 ? DEBUG -226282 java.sql.PreparedStatement - {pstm-100055} Types: []
+[BookManager] 2017-12-24 23:45:14636 ? DEBUG -226505 java.sql.Connection - {conn-100057} Connection
+[BookManager] 2017-12-24 23:45:14637 ? DEBUG -226506 java.sql.Connection - {conn-100057} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:14638 ? DEBUG -226507 java.sql.PreparedStatement - {pstm-100058} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:14638 ? DEBUG -226507 java.sql.PreparedStatement - {pstm-100058} Parameters: []
+[BookManager] 2017-12-24 23:45:14639 ? DEBUG -226508 java.sql.PreparedStatement - {pstm-100058} Types: []
+[BookManager] 2017-12-24 23:45:14814 ? DEBUG -226683 java.sql.Connection - {conn-100060} Connection
+[BookManager] 2017-12-24 23:45:14815 ? DEBUG -226684 java.sql.Connection - {conn-100060} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:14815 ? DEBUG -226684 java.sql.PreparedStatement - {pstm-100061} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:14816 ? DEBUG -226685 java.sql.PreparedStatement - {pstm-100061} Parameters: []
+[BookManager] 2017-12-24 23:45:14816 ? DEBUG -226685 java.sql.PreparedStatement - {pstm-100061} Types: []
+[BookManager] 2017-12-24 23:45:1515 ? DEBUG -226884 java.sql.Connection - {conn-100063} Connection
+[BookManager] 2017-12-24 23:45:1516 ? DEBUG -226885 java.sql.Connection - {conn-100063} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:1518 ? DEBUG -226887 java.sql.PreparedStatement - {pstm-100064} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:1518 ? DEBUG -226887 java.sql.PreparedStatement - {pstm-100064} Parameters: []
+[BookManager] 2017-12-24 23:45:1518 ? DEBUG -226887 java.sql.PreparedStatement - {pstm-100064} Types: []
+[BookManager] 2017-12-24 23:45:52574 ? DEBUG -264443 java.sql.Connection - {conn-100066} Connection
+[BookManager] 2017-12-24 23:45:52574 ? DEBUG -264443 java.sql.Connection - {conn-100066} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:52575 ? DEBUG -264444 java.sql.PreparedStatement - {pstm-100067} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:45:52575 ? DEBUG -264444 java.sql.PreparedStatement - {pstm-100067} Parameters: []
+[BookManager] 2017-12-24 23:45:52575 ? DEBUG -264444 java.sql.PreparedStatement - {pstm-100067} Types: []
+[BookManager] 2017-12-24 23:46:19391 ? DEBUG -291260 java.sql.Connection - {conn-100069} Connection
+[BookManager] 2017-12-24 23:46:19392 ? DEBUG -291261 java.sql.Connection - {conn-100069} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:46:19392 ? DEBUG -291261 java.sql.PreparedStatement - {pstm-100070} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:46:19392 ? DEBUG -291261 java.sql.PreparedStatement - {pstm-100070} Parameters: []
+[BookManager] 2017-12-24 23:46:19392 ? DEBUG -291261 java.sql.PreparedStatement - {pstm-100070} Types: []
+[BookManager] 2017-12-24 23:47:41466 ? DEBUG -373335 java.sql.Connection - {conn-100072} Connection
+[BookManager] 2017-12-24 23:47:41467 ? DEBUG -373336 java.sql.Connection - {conn-100072} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:41467 ? DEBUG -373336 java.sql.PreparedStatement - {pstm-100073} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:41468 ? DEBUG -373337 java.sql.PreparedStatement - {pstm-100073} Parameters: []
+[BookManager] 2017-12-24 23:47:41468 ? DEBUG -373337 java.sql.PreparedStatement - {pstm-100073} Types: []
+[BookManager] 2017-12-24 23:47:42890 ? DEBUG -374759 java.sql.Connection - {conn-100075} Connection
+[BookManager] 2017-12-24 23:47:42891 ? DEBUG -374760 java.sql.Connection - {conn-100075} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:42891 ? DEBUG -374760 java.sql.PreparedStatement - {pstm-100076} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:42891 ? DEBUG -374760 java.sql.PreparedStatement - {pstm-100076} Parameters: []
+[BookManager] 2017-12-24 23:47:42891 ? DEBUG -374760 java.sql.PreparedStatement - {pstm-100076} Types: []
+[BookManager] 2017-12-24 23:47:48481 ? DEBUG -380350 java.sql.Connection - {conn-100078} Connection
+[BookManager] 2017-12-24 23:47:48482 ? DEBUG -380351 java.sql.Connection - {conn-100078} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:48482 ? DEBUG -380351 java.sql.PreparedStatement - {pstm-100079} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:48482 ? DEBUG -380351 java.sql.PreparedStatement - {pstm-100079} Parameters: []
+[BookManager] 2017-12-24 23:47:48483 ? DEBUG -380352 java.sql.PreparedStatement - {pstm-100079} Types: []
+[BookManager] 2017-12-24 23:47:49670 ? DEBUG -381539 java.sql.Connection - {conn-100081} Connection
+[BookManager] 2017-12-24 23:47:49670 ? DEBUG -381539 java.sql.Connection - {conn-100081} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:49672 ? DEBUG -381541 java.sql.PreparedStatement - {pstm-100082} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:49672 ? DEBUG -381541 java.sql.PreparedStatement - {pstm-100082} Parameters: []
+[BookManager] 2017-12-24 23:47:49672 ? DEBUG -381541 java.sql.PreparedStatement - {pstm-100082} Types: []
+[BookManager] 2017-12-24 23:47:52366 ? DEBUG -384235 java.sql.Connection - {conn-100084} Connection
+[BookManager] 2017-12-24 23:47:52367 ? DEBUG -384236 java.sql.Connection - {conn-100084} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:52367 ? DEBUG -384236 java.sql.PreparedStatement - {pstm-100085} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:52367 ? DEBUG -384236 java.sql.PreparedStatement - {pstm-100085} Parameters: []
+[BookManager] 2017-12-24 23:47:52367 ? DEBUG -384236 java.sql.PreparedStatement - {pstm-100085} Types: []
+[BookManager] 2017-12-24 23:47:56396 ? DEBUG -388265 java.sql.Connection - {conn-100087} Connection
+[BookManager] 2017-12-24 23:47:56397 ? DEBUG -388266 java.sql.Connection - {conn-100087} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:56397 ? DEBUG -388266 java.sql.PreparedStatement - {pstm-100088} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:56397 ? DEBUG -388266 java.sql.PreparedStatement - {pstm-100088} Parameters: []
+[BookManager] 2017-12-24 23:47:56397 ? DEBUG -388266 java.sql.PreparedStatement - {pstm-100088} Types: []
+[BookManager] 2017-12-24 23:47:57178 ? DEBUG -389047 java.sql.Connection - {conn-100090} Connection
+[BookManager] 2017-12-24 23:47:57179 ? DEBUG -389048 java.sql.Connection - {conn-100090} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:57179 ? DEBUG -389048 java.sql.PreparedStatement - {pstm-100091} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:57180 ? DEBUG -389049 java.sql.PreparedStatement - {pstm-100091} Parameters: []
+[BookManager] 2017-12-24 23:47:57180 ? DEBUG -389049 java.sql.PreparedStatement - {pstm-100091} Types: []
+[BookManager] 2017-12-24 23:47:57410 ? DEBUG -389279 java.sql.Connection - {conn-100093} Connection
+[BookManager] 2017-12-24 23:47:57411 ? DEBUG -389280 java.sql.Connection - {conn-100093} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:57411 ? DEBUG -389280 java.sql.PreparedStatement - {pstm-100094} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:47:57412 ? DEBUG -389281 java.sql.PreparedStatement - {pstm-100094} Parameters: []
+[BookManager] 2017-12-24 23:47:57412 ? DEBUG -389281 java.sql.PreparedStatement - {pstm-100094} Types: []
+[BookManager] 2017-12-24 23:48:10843 ? DEBUG -402712 java.sql.Connection - {conn-100096} Connection
+[BookManager] 2017-12-24 23:48:10844 ? DEBUG -402713 java.sql.Connection - {conn-100096} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:10848 ? DEBUG -402717 java.sql.PreparedStatement - {pstm-100097} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:10848 ? DEBUG -402717 java.sql.PreparedStatement - {pstm-100097} Parameters: []
+[BookManager] 2017-12-24 23:48:10849 ? DEBUG -402718 java.sql.PreparedStatement - {pstm-100097} Types: []
+[BookManager] 2017-12-24 23:48:12400 ? DEBUG -404269 java.sql.Connection - {conn-100099} Connection
+[BookManager] 2017-12-24 23:48:12401 ? DEBUG -404270 java.sql.Connection - {conn-100099} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:12401 ? DEBUG -404270 java.sql.PreparedStatement - {pstm-100100} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:12401 ? DEBUG -404270 java.sql.PreparedStatement - {pstm-100100} Parameters: []
+[BookManager] 2017-12-24 23:48:12402 ? DEBUG -404271 java.sql.PreparedStatement - {pstm-100100} Types: []
+[BookManager] 2017-12-24 23:48:12805 ? DEBUG -404674 java.sql.Connection - {conn-100102} Connection
+[BookManager] 2017-12-24 23:48:12806 ? DEBUG -404675 java.sql.Connection - {conn-100102} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:12806 ? DEBUG -404675 java.sql.PreparedStatement - {pstm-100103} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:12806 ? DEBUG -404675 java.sql.PreparedStatement - {pstm-100103} Parameters: []
+[BookManager] 2017-12-24 23:48:12807 ? DEBUG -404676 java.sql.PreparedStatement - {pstm-100103} Types: []
+[BookManager] 2017-12-24 23:48:1321 ? DEBUG -404890 java.sql.Connection - {conn-100105} Connection
+[BookManager] 2017-12-24 23:48:1321 ? DEBUG -404890 java.sql.Connection - {conn-100105} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:1322 ? DEBUG -404891 java.sql.PreparedStatement - {pstm-100106} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:1322 ? DEBUG -404891 java.sql.PreparedStatement - {pstm-100106} Parameters: []
+[BookManager] 2017-12-24 23:48:1322 ? DEBUG -404891 java.sql.PreparedStatement - {pstm-100106} Types: []
+[BookManager] 2017-12-24 23:48:13252 ? DEBUG -405121 java.sql.Connection - {conn-100108} Connection
+[BookManager] 2017-12-24 23:48:13252 ? DEBUG -405121 java.sql.Connection - {conn-100108} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:13253 ? DEBUG -405122 java.sql.PreparedStatement - {pstm-100109} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:13253 ? DEBUG -405122 java.sql.PreparedStatement - {pstm-100109} Parameters: []
+[BookManager] 2017-12-24 23:48:13253 ? DEBUG -405122 java.sql.PreparedStatement - {pstm-100109} Types: []
+[BookManager] 2017-12-24 23:48:13491 ? DEBUG -405360 java.sql.Connection - {conn-100111} Connection
+[BookManager] 2017-12-24 23:48:13492 ? DEBUG -405361 java.sql.Connection - {conn-100111} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:13492 ? DEBUG -405361 java.sql.PreparedStatement - {pstm-100112} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:13492 ? DEBUG -405361 java.sql.PreparedStatement - {pstm-100112} Parameters: []
+[BookManager] 2017-12-24 23:48:13493 ? DEBUG -405362 java.sql.PreparedStatement - {pstm-100112} Types: []
+[BookManager] 2017-12-24 23:48:24497 ? DEBUG -416366 java.sql.Connection - {conn-100114} Connection
+[BookManager] 2017-12-24 23:48:24499 ? DEBUG -416368 java.sql.Connection - {conn-100114} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:24499 ? DEBUG -416368 java.sql.PreparedStatement - {pstm-100115} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:24500 ? DEBUG -416369 java.sql.PreparedStatement - {pstm-100115} Parameters: []
+[BookManager] 2017-12-24 23:48:24500 ? DEBUG -416369 java.sql.PreparedStatement - {pstm-100115} Types: []
+[BookManager] 2017-12-24 23:48:55246 ? DEBUG -447115 java.sql.Connection - {conn-100117} Connection
+[BookManager] 2017-12-24 23:48:55247 ? DEBUG -447116 java.sql.Connection - {conn-100117} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:55248 ? DEBUG -447117 java.sql.PreparedStatement - {pstm-100118} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:55248 ? DEBUG -447117 java.sql.PreparedStatement - {pstm-100118} Parameters: []
+[BookManager] 2017-12-24 23:48:55248 ? DEBUG -447117 java.sql.PreparedStatement - {pstm-100118} Types: []
+[BookManager] 2017-12-24 23:48:56204 ? DEBUG -448073 java.sql.Connection - {conn-100120} Connection
+[BookManager] 2017-12-24 23:48:56205 ? DEBUG -448074 java.sql.Connection - {conn-100120} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:56206 ? DEBUG -448075 java.sql.PreparedStatement - {pstm-100121} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:56206 ? DEBUG -448075 java.sql.PreparedStatement - {pstm-100121} Parameters: []
+[BookManager] 2017-12-24 23:48:56206 ? DEBUG -448075 java.sql.PreparedStatement - {pstm-100121} Types: []
+[BookManager] 2017-12-24 23:48:56475 ? DEBUG -448344 java.sql.Connection - {conn-100123} Connection
+[BookManager] 2017-12-24 23:48:56476 ? DEBUG -448345 java.sql.Connection - {conn-100123} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:56476 ? DEBUG -448345 java.sql.PreparedStatement - {pstm-100124} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:48:56477 ? DEBUG -448346 java.sql.PreparedStatement - {pstm-100124} Parameters: []
+[BookManager] 2017-12-24 23:48:56477 ? DEBUG -448346 java.sql.PreparedStatement - {pstm-100124} Types: []
+[BookManager] 2017-12-24 23:49:34239 ? DEBUG -486108 java.sql.Connection - {conn-100126} Connection
+[BookManager] 2017-12-24 23:49:34239 ? DEBUG -486108 java.sql.Connection - {conn-100126} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:49:34240 ? DEBUG -486109 java.sql.PreparedStatement - {pstm-100127} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:49:34240 ? DEBUG -486109 java.sql.PreparedStatement - {pstm-100127} Parameters: []
+[BookManager] 2017-12-24 23:49:34240 ? DEBUG -486109 java.sql.PreparedStatement - {pstm-100127} Types: []
+[BookManager] 2017-12-24 23:50:07707 ? DEBUG -519576 java.sql.Connection - {conn-100129} Connection
+[BookManager] 2017-12-24 23:50:07708 ? DEBUG -519577 java.sql.Connection - {conn-100129} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:50:07709 ? DEBUG -519578 java.sql.PreparedStatement - {pstm-100130} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:50:07709 ? DEBUG -519578 java.sql.PreparedStatement - {pstm-100130} Parameters: []
+[BookManager] 2017-12-24 23:50:07709 ? DEBUG -519578 java.sql.PreparedStatement - {pstm-100130} Types: []
+[BookManager] 2017-12-24 23:51:18196 ? DEBUG -590065 java.sql.Connection - {conn-100132} Connection
+[BookManager] 2017-12-24 23:51:18196 ? DEBUG -590065 java.sql.Connection - {conn-100132} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:51:18196 ? DEBUG -590065 java.sql.PreparedStatement - {pstm-100133} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:51:18196 ? DEBUG -590065 java.sql.PreparedStatement - {pstm-100133} Parameters: []
+[BookManager] 2017-12-24 23:51:18196 ? DEBUG -590065 java.sql.PreparedStatement - {pstm-100133} Types: []
+[BookManager] 2017-12-24 23:55:02693 ? DEBUG -814562 java.sql.Connection - {conn-100135} Connection
+[BookManager] 2017-12-24 23:55:02694 ? DEBUG -814563 java.sql.Connection - {conn-100135} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:02695 ? DEBUG -814564 java.sql.PreparedStatement - {pstm-100136} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:02695 ? DEBUG -814564 java.sql.PreparedStatement - {pstm-100136} Parameters: []
+[BookManager] 2017-12-24 23:55:02695 ? DEBUG -814564 java.sql.PreparedStatement - {pstm-100136} Types: []
+[BookManager] 2017-12-24 23:55:05306 ? DEBUG -817175 java.sql.Connection - {conn-100138} Connection
+[BookManager] 2017-12-24 23:55:05306 ? DEBUG -817175 java.sql.Connection - {conn-100138} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:05307 ? DEBUG -817176 java.sql.PreparedStatement - {pstm-100139} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:05307 ? DEBUG -817176 java.sql.PreparedStatement - {pstm-100139} Parameters: []
+[BookManager] 2017-12-24 23:55:05307 ? DEBUG -817176 java.sql.PreparedStatement - {pstm-100139} Types: []
+[BookManager] 2017-12-24 23:55:1114 ? DEBUG -822883 java.sql.Connection - {conn-100141} Connection
+[BookManager] 2017-12-24 23:55:1115 ? DEBUG -822884 java.sql.Connection - {conn-100141} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:1115 ? DEBUG -822884 java.sql.PreparedStatement - {pstm-100142} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:1115 ? DEBUG -822884 java.sql.PreparedStatement - {pstm-100142} Parameters: []
+[BookManager] 2017-12-24 23:55:1115 ? DEBUG -822884 java.sql.PreparedStatement - {pstm-100142} Types: []
+[BookManager] 2017-12-24 23:55:11197 ? DEBUG -823066 java.sql.Connection - {conn-100144} Connection
+[BookManager] 2017-12-24 23:55:11197 ? DEBUG -823066 java.sql.Connection - {conn-100144} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:11198 ? DEBUG -823067 java.sql.PreparedStatement - {pstm-100145} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:11198 ? DEBUG -823067 java.sql.PreparedStatement - {pstm-100145} Parameters: []
+[BookManager] 2017-12-24 23:55:11198 ? DEBUG -823067 java.sql.PreparedStatement - {pstm-100145} Types: []
+[BookManager] 2017-12-24 23:55:13165 ? DEBUG -825034 java.sql.Connection - {conn-100147} Connection
+[BookManager] 2017-12-24 23:55:13165 ? DEBUG -825034 java.sql.Connection - {conn-100147} Preparing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:13166 ? DEBUG -825035 java.sql.PreparedStatement - {pstm-100148} Executing Statement:      select                           id, cfg_type, cfg_value, cfg_value_id, parent, enable, priority, is_edit, system_id        from t_sys_dictionary                                                            
+[BookManager] 2017-12-24 23:55:13166 ? DEBUG -825035 java.sql.PreparedStatement - {pstm-100148} Parameters: []
+[BookManager] 2017-12-24 23:55:13166 ? DEBUG -825035 java.sql.PreparedStatement - {pstm-100148} Types: []

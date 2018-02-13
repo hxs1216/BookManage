@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- 配置整合ibatis过程 -->
+	<!-- 1.配置数据库相关参数properties的属性：${url} -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<!-- 2.数据库连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<!-- 配置连接池属性 -->
+		<property name="driverClass" value="${jdbc.driver}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+
+		<!-- c3p0连接池的私有属性 -->
+		<property name="maxPoolSize" value="${jdbc.maxPoolSize}" />
+		<property name="minPoolSize" value="${jdbc.minPoolSize}" />
+		<!-- 关闭连接后不自动commit -->
+		<property name="autoCommitOnClose" value="${jdbc.autoCommitOnClose}" />
+		<!-- 获取连接超时时间 -->
+		<property name="checkoutTimeout" value="${jdbc.checkoutTimeout}" />
+		<!-- 当获取连接失败重试次数 -->
+		<property name="acquireRetryAttempts" value="${jdbc.acquireRetryAttempts}" />
+		<!--连接的最大空闲时间（单位：秒），当连接空闲超时此时间后，连接将被回收-->
+		<property name="maxIdleTime" value="${jdbc.maxIdleTime}" />
+	</bean>
+
+	<!-- IBatis ORM 操作类 -->
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:SqlMapConfig.xml" />
+		<property name="mappingLocations">
+			<list>
+				<value>classpath:/com/biyao/*/model/xml/*.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 需要文件上传功能时，启用以下配置 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxInMemorySize">
+			<value>1638400</value>
+		</property>
+	</bean>
+
+
+</beans>

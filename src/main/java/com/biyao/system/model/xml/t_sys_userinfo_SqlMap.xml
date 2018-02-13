@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_sys_userinfo" >
+  <resultMap id="BaseResultMap" class="com.biyao.system.model.SysUserInfo" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="library_name" property="libraryName" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="login_account" property="loginAccount" jdbcType="VARCHAR" />
+    <result column="user_pwd" property="userPwd" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="connect_phone" property="connectPhone" jdbcType="VARCHAR" />
+    <result column="qq_account" property="qqAccount" jdbcType="VARCHAR" />
+    <result column="wechat_account" property="wechatAccount" jdbcType="VARCHAR" />
+    <result column="nation" property="nation" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="work_unit" property="workUnit" jdbcType="VARCHAR" />
+    <result column="grade" property="grade" jdbcType="VARCHAR" />
+    <result column="library_introduce" property="libraryIntroduce" jdbcType="VARCHAR" />
+    <result column="express1" property="express1" jdbcType="VARCHAR" />
+    <result column="express2" property="express2" jdbcType="VARCHAR" />
+    <result column="express3" property="express3" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="t_sys_userinfo.Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$ #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <sql id="t_sys_userinfo.mysql_Pagination_Limit" >
+    <dynamic >
+      <isNotEmpty property="mysqlOffset" >
+        <isNotEmpty property="mysqlLength" >
+          <![CDATA[ limit #mysqlOffset# , #mysqlLength# ]]>
+        </isNotEmpty>
+      </isNotEmpty>
+    </dynamic>
+  </sql>
+  <sql id="t_sys_userinfo.Base_Column_List" >
+    id, library_name, user_id, user_name, login_account, user_pwd, email, connect_phone, 
+    qq_account, wechat_account, nation, province, city, work_unit, grade, library_introduce, 
+    express1, express2, express3
+  </sql>
+  <select id="t_sys_userinfo.selectByExample" resultMap="BaseResultMap" parameterClass="com.biyao.system.model.SysUserInfoExample" >
+    select
+    <isParameterPresent >
+      <isEqual property="distinct" compareValue="true" >
+        distinct
+      </isEqual>
+    </isParameterPresent>
+    <include refid="t_sys_userinfo.Base_Column_List" />
+    from t_sys_userinfo
+    <isParameterPresent >
+      <include refid="t_sys_userinfo.Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+    <include refid="t_sys_userinfo.mysql_Pagination_Limit" />
+  </select>
+  <select id="t_sys_userinfo.selectByPrimaryKey" resultMap="BaseResultMap" parameterClass="com.biyao.system.model.SysUserInfo" >
+    select 
+    <include refid="t_sys_userinfo.Base_Column_List" />
+    from t_sys_userinfo
+    where id = #id:INTEGER#
+  </select>
+  <delete id="t_sys_userinfo.deleteByPrimaryKey" parameterClass="com.biyao.system.model.SysUserInfo" >
+    delete from t_sys_userinfo
+    where id = #id:INTEGER#
+  </delete>
+  <delete id="t_sys_userinfo.deleteByExample" parameterClass="com.biyao.system.model.SysUserInfoExample" >
+    delete from t_sys_userinfo
+    <include refid="t_sys_userinfo.Example_Where_Clause" />
+  </delete>
+  <insert id="t_sys_userinfo.insert" parameterClass="com.biyao.system.model.SysUserInfo" >
+    insert into t_sys_userinfo (id, library_name, user_id, user_name, 
+      login_account, user_pwd, email, connect_phone, 
+      qq_account, wechat_account, nation, province, 
+      city, work_unit, grade, library_introduce, 
+      express1, express2, express3)
+    values (#id:INTEGER#, #libraryName:VARCHAR#, #userId:VARCHAR#, #userName:VARCHAR#, 
+      #loginAccount:VARCHAR#, #userPwd:VARCHAR#, #email:VARCHAR#, #connectPhone:VARCHAR#, 
+      #qqAccount:VARCHAR#, #wechatAccount:VARCHAR#, #nation:VARCHAR#, #province:VARCHAR#, 
+      #city:VARCHAR#, #workUnit:VARCHAR#, #grade:VARCHAR#, #libraryIntroduce:VARCHAR#, 
+      #express1:VARCHAR#, #express2:VARCHAR#, #express3:VARCHAR#)
+  </insert>
+  <insert id="t_sys_userinfo.insertSelective" parameterClass="com.biyao.system.model.SysUserInfo" >
+    insert into t_sys_userinfo
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="libraryName" >
+        library_name
+      </isNotNull>
+      <isNotNull prepend="," property="userId" >
+        user_id
+      </isNotNull>
+      <isNotNull prepend="," property="userName" >
+        user_name
+      </isNotNull>
+      <isNotNull prepend="," property="loginAccount" >
+        login_account
+      </isNotNull>
+      <isNotNull prepend="," property="userPwd" >
+        user_pwd
+      </isNotNull>
+      <isNotNull prepend="," property="email" >
+        email
+      </isNotNull>
+      <isNotNull prepend="," property="connectPhone" >
+        connect_phone
+      </isNotNull>
+      <isNotNull prepend="," property="qqAccount" >
+        qq_account
+      </isNotNull>
+      <isNotNull prepend="," property="wechatAccount" >
+        wechat_account
+      </isNotNull>
+      <isNotNull prepend="," property="nation" >
+        nation
+      </isNotNull>
+      <isNotNull prepend="," property="province" >
+        province
+      </isNotNull>
+      <isNotNull prepend="," property="city" >
+        city
+      </isNotNull>
+      <isNotNull prepend="," property="workUnit" >
+        work_unit
+      </isNotNull>
+      <isNotNull prepend="," property="grade" >
+        grade
+      </isNotNull>
+      <isNotNull prepend="," property="libraryIntroduce" >
+        library_introduce
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        express1
+      </isNotNull>
+      <isNotNull prepend="," property="express2" >
+        express2
+      </isNotNull>
+      <isNotNull prepend="," property="express3" >
+        express3
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="libraryName" >
+        #libraryName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="userId" >
+        #userId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="userName" >
+        #userName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="loginAccount" >
+        #loginAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="userPwd" >
+        #userPwd:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="email" >
+        #email:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="connectPhone" >
+        #connectPhone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="qqAccount" >
+        #qqAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="wechatAccount" >
+        #wechatAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="nation" >
+        #nation:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="province" >
+        #province:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="city" >
+        #city:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="workUnit" >
+        #workUnit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="grade" >
+        #grade:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="libraryIntroduce" >
+        #libraryIntroduce:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        #express1:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="express2" >
+        #express2:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="express3" >
+        #express3:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="t_sys_userinfo.countByExample" parameterClass="com.biyao.system.model.SysUserInfoExample" resultClass="java.lang.Integer" >
+    select count(*) from t_sys_userinfo
+    <include refid="t_sys_userinfo.Example_Where_Clause" />
+  </select>
+  <update id="t_sys_userinfo.updateByExampleSelective" >
+    update t_sys_userinfo
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.libraryName" >
+        library_name = #record.libraryName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.userId" >
+        user_id = #record.userId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.userName" >
+        user_name = #record.userName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.loginAccount" >
+        login_account = #record.loginAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.userPwd" >
+        user_pwd = #record.userPwd:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.email" >
+        email = #record.email:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.connectPhone" >
+        connect_phone = #record.connectPhone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.qqAccount" >
+        qq_account = #record.qqAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.wechatAccount" >
+        wechat_account = #record.wechatAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.nation" >
+        nation = #record.nation:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.province" >
+        province = #record.province:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.city" >
+        city = #record.city:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.workUnit" >
+        work_unit = #record.workUnit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.grade" >
+        grade = #record.grade:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.libraryIntroduce" >
+        library_introduce = #record.libraryIntroduce:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.express1" >
+        express1 = #record.express1:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.express2" >
+        express2 = #record.express2:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.express3" >
+        express3 = #record.express3:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_sys_userinfo.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_sys_userinfo.updateByExample" >
+    update t_sys_userinfo
+    set id = #record.id:INTEGER#,
+      library_name = #record.libraryName:VARCHAR#,
+      user_id = #record.userId:VARCHAR#,
+      user_name = #record.userName:VARCHAR#,
+      login_account = #record.loginAccount:VARCHAR#,
+      user_pwd = #record.userPwd:VARCHAR#,
+      email = #record.email:VARCHAR#,
+      connect_phone = #record.connectPhone:VARCHAR#,
+      qq_account = #record.qqAccount:VARCHAR#,
+      wechat_account = #record.wechatAccount:VARCHAR#,
+      nation = #record.nation:VARCHAR#,
+      province = #record.province:VARCHAR#,
+      city = #record.city:VARCHAR#,
+      work_unit = #record.workUnit:VARCHAR#,
+      grade = #record.grade:VARCHAR#,
+      library_introduce = #record.libraryIntroduce:VARCHAR#,
+      express1 = #record.express1:VARCHAR#,
+      express2 = #record.express2:VARCHAR#,
+      express3 = #record.express3:VARCHAR#
+    <isParameterPresent >
+      <include refid="t_sys_userinfo.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_sys_userinfo.updateByPrimaryKeySelective" parameterClass="com.biyao.system.model.SysUserInfo" >
+    update t_sys_userinfo
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="libraryName" >
+        library_name = #libraryName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="userId" >
+        user_id = #userId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="userName" >
+        user_name = #userName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="loginAccount" >
+        login_account = #loginAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="userPwd" >
+        user_pwd = #userPwd:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="email" >
+        email = #email:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="connectPhone" >
+        connect_phone = #connectPhone:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="qqAccount" >
+        qq_account = #qqAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="wechatAccount" >
+        wechat_account = #wechatAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="nation" >
+        nation = #nation:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="province" >
+        province = #province:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="city" >
+        city = #city:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="workUnit" >
+        work_unit = #workUnit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="grade" >
+        grade = #grade:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="libraryIntroduce" >
+        library_introduce = #libraryIntroduce:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        express1 = #express1:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="express2" >
+        express2 = #express2:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="express3" >
+        express3 = #express3:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:INTEGER#
+  </update>
+  <update id="t_sys_userinfo.updateByPrimaryKey" parameterClass="com.biyao.system.model.SysUserInfo" >
+    update t_sys_userinfo
+    set library_name = #libraryName:VARCHAR#,
+      user_id = #userId:VARCHAR#,
+      user_name = #userName:VARCHAR#,
+      login_account = #loginAccount:VARCHAR#,
+      user_pwd = #userPwd:VARCHAR#,
+      email = #email:VARCHAR#,
+      connect_phone = #connectPhone:VARCHAR#,
+      qq_account = #qqAccount:VARCHAR#,
+      wechat_account = #wechatAccount:VARCHAR#,
+      nation = #nation:VARCHAR#,
+      province = #province:VARCHAR#,
+      city = #city:VARCHAR#,
+      work_unit = #workUnit:VARCHAR#,
+      grade = #grade:VARCHAR#,
+      library_introduce = #libraryIntroduce:VARCHAR#,
+      express1 = #express1:VARCHAR#,
+      express2 = #express2:VARCHAR#,
+      express3 = #express3:VARCHAR#
+    where id = #id:INTEGER#
+  </update>
+</sqlMap>

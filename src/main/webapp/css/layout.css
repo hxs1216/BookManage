@@ -1,0 +1,115 @@
+﻿body
+{
+	
+	margin: 0 auto;
+    padding: 0;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica;
+    color: #666;
+    background: url(../images/bg.png) top center;
+}
+a img
+{
+	border: 0;
+}
+a
+{
+	text-decoration: none;
+	color: #000;
+}
+a:hover, a:active
+{
+	text-decoration: underline;
+	color: #00afff;
+}
+img a
+{
+	border: none;
+}
+#main
+{
+}
+#searchbar
+{
+	background: url(../images/bg_searchbar.png) no-repeat;
+	height: 62px;
+	margin: 42px 0 0 108px;
+}
+#searchbar input
+{
+	border: none;
+	float: left;
+	width: 435px;
+	height: 47px; 
+	color: #ccc;
+	font-size: 14px;
+	margin: 6px 0 0 15px;
+}
+.btn_search
+{
+	float: left;
+	width: 76px;
+	height: 61px;
+}
+.btn_search a
+{
+	border: 0;
+}
+.tablebox
+{
+	background:  url(../images/bg_index.png) no-repeat;
+	width: 911px;
+	height: 766px;
+	position: relative;
+	top: -37px;
+}
+.index_table
+{
+	position: absolute;
+	top: 260px;
+	width: 100%;
+	padding: 0 80px;
+	border-spacing: 0;
+}
+
+ol li
+{
+	list-style: none;
+	float: left;
+	border-radius: 100px;
+	border: solid 2px #f8cf27;
+	font-weight: bold;
+	padding: 6px 10px;
+	margin: 0 3px;
+	cursor: pointer;
+}
+ol li a
+{
+	color: #8e8e8e;
+}
+ol li a:hover, ol li a:hover
+{
+	text-decoration: none;
+	color: #000;
+}
+.current_page
+{
+	color: #000;
+	background: #fbed68;
+}
+@media only screen and (max-width: 450px){
+	.headbox{
+		width: 100%;
+	}
+	#main
+	{
+		width: 100%;
+	}
+	#searchbar
+	{
+		background: url(../images/bg_searchbar.png) no-repeat;
+		height: 62px;
+		margin: 42px 0 0 108px;
+	}
+
+}

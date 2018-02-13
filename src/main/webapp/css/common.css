@@ -1,0 +1,118 @@
+﻿* {
+	margin: 0;
+    padding: 0;
+	font-family: 微软雅黑;
+}
+
+.search_text{
+	font-size: 13px;
+	min-height: 40px;
+	width: 310px;
+	padding: 7px 11px;
+	outline: none;
+	color: #333;
+	margin-left: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: all 0.15s ease-in;
+	vertical-align: middle;
+}
+
+.search_button{
+	position: relative;
+	display: inline-block;
+	margin-left: 0px;
+	background: #33cc33;
+	padding: 9px 28px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+	white-space: nowrap;
+	border-radius: 3px;
+	border: solid 1px #33cc33;
+	border-bottom-color: #c5c5c5;
+	box-shadow: 0 1px 3px rgba(0,0,0,.05);
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.noShowDetail{
+	display: none;
+}
+
+.cursor{
+	cursor: pointer;
+}
+
+
+#head
+{
+	background:#fff;
+	height: 52px;
+}
+.headbox
+{
+	width: 90%;
+}
+.logo
+{
+	float:left;
+	cursor: pointer;
+}
+.loginbox
+{
+	float: right;
+	margin-top: 16px;
+}
+.login
+{
+	background: #e6f9e6;
+	border: solid 1px #33cc33;
+	border-radius: 5px;
+	padding: 5px 25px;
+	cursor: pointer;
+}
+.login a
+{
+	color: #000;
+	text-decoration: none;
+}
+.register
+{
+	background: #33cc33;
+	border: solid 1px #33cc33;
+	border-radius: 5px;
+	padding: 5px 25px;
+	cursor: pointer;
+}
+.register a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+.index_table td
+{
+	text-align: center;
+	padding: 10px 5px;
+	border-bottom: solid 1px #eee;
+}
+.index_table .td2
+{
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+}
+.index_table .bookname
+{
+	font-weight: bold;
+}
+.index_table tfoot td
+{
+	border: 0;
+
+}

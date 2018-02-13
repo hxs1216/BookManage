@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_book_comment" >
+  <resultMap id="BaseResultMap" class="com.biyao.book.model.BookComment" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
+    <result column="comment_person" property="commentPerson" jdbcType="VARCHAR" />
+    <result column="book_id" property="bookId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="express1" property="express1" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="t_book_comment.Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$ #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <sql id="t_book_comment.mysql_Pagination_Limit" >
+    <dynamic >
+      <isNotEmpty property="mysqlOffset" >
+        <isNotEmpty property="mysqlLength" >
+          <![CDATA[ limit #mysqlOffset# , #mysqlLength# ]]>
+        </isNotEmpty>
+      </isNotEmpty>
+    </dynamic>
+  </sql>
+  <sql id="t_book_comment.Base_Column_List" >
+    id, comment, comment_person, book_id, create_time, update_time, express1
+  </sql>
+  <select id="t_book_comment.selectByExample" resultMap="BaseResultMap" parameterClass="com.biyao.book.model.BookCommentExample" >
+    select
+    <isParameterPresent >
+      <isEqual property="distinct" compareValue="true" >
+        distinct
+      </isEqual>
+    </isParameterPresent>
+    <include refid="t_book_comment.Base_Column_List" />
+    from t_book_comment
+    <isParameterPresent >
+      <include refid="t_book_comment.Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+    <include refid="t_book_comment.mysql_Pagination_Limit" />
+  </select>
+  <select id="t_book_comment.selectByPrimaryKey" resultMap="BaseResultMap" parameterClass="com.biyao.book.model.BookComment" >
+    select 
+    <include refid="t_book_comment.Base_Column_List" />
+    from t_book_comment
+    where id = #id:INTEGER#
+  </select>
+  <delete id="t_book_comment.deleteByPrimaryKey" parameterClass="com.biyao.book.model.BookComment" >
+    delete from t_book_comment
+    where id = #id:INTEGER#
+  </delete>
+  <delete id="t_book_comment.deleteByExample" parameterClass="com.biyao.book.model.BookCommentExample" >
+    delete from t_book_comment
+    <include refid="t_book_comment.Example_Where_Clause" />
+  </delete>
+  <insert id="t_book_comment.insert" parameterClass="com.biyao.book.model.BookComment" >
+    insert into t_book_comment (id, comment, comment_person, book_id, 
+      create_time, update_time, express1)
+    values (#id:INTEGER#, #comment:VARCHAR#, #commentPerson:VARCHAR#, #bookId:VARCHAR#, 
+      #createTime:TIMESTAMP#, #updateTime:TIMESTAMP#, #express1:VARCHAR#)
+  </insert>
+  <insert id="t_book_comment.insertSelective" parameterClass="com.biyao.book.model.BookComment" >
+    insert into t_book_comment
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="comment" >
+        comment
+      </isNotNull>
+      <isNotNull prepend="," property="commentPerson" >
+        comment_person
+      </isNotNull>
+      <isNotNull prepend="," property="bookId" >
+        book_id
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        update_time
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        express1
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="comment" >
+        #comment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="commentPerson" >
+        #commentPerson:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookId" >
+        #bookId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        #updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        #express1:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="t_book_comment.countByExample" parameterClass="com.biyao.book.model.BookCommentExample" resultClass="java.lang.Integer" >
+    select count(*) from t_book_comment
+    <include refid="t_book_comment.Example_Where_Clause" />
+  </select>
+  <update id="t_book_comment.updateByExampleSelective" >
+    update t_book_comment
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.comment" >
+        comment = #record.comment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.commentPerson" >
+        comment_person = #record.commentPerson:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookId" >
+        book_id = #record.bookId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createTime" >
+        create_time = #record.createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.updateTime" >
+        update_time = #record.updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.express1" >
+        express1 = #record.express1:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_book_comment.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_book_comment.updateByExample" >
+    update t_book_comment
+    set id = #record.id:INTEGER#,
+      comment = #record.comment:VARCHAR#,
+      comment_person = #record.commentPerson:VARCHAR#,
+      book_id = #record.bookId:VARCHAR#,
+      create_time = #record.createTime:TIMESTAMP#,
+      update_time = #record.updateTime:TIMESTAMP#,
+      express1 = #record.express1:VARCHAR#
+    <isParameterPresent >
+      <include refid="t_book_comment.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_book_comment.updateByPrimaryKeySelective" parameterClass="com.biyao.book.model.BookComment" >
+    update t_book_comment
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="comment" >
+        comment = #comment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="commentPerson" >
+        comment_person = #commentPerson:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookId" >
+        book_id = #bookId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time = #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        update_time = #updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        express1 = #express1:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:INTEGER#
+  </update>
+  <update id="t_book_comment.updateByPrimaryKey" parameterClass="com.biyao.book.model.BookComment" >
+    update t_book_comment
+    set comment = #comment:VARCHAR#,
+      comment_person = #commentPerson:VARCHAR#,
+      book_id = #bookId:VARCHAR#,
+      create_time = #createTime:TIMESTAMP#,
+      update_time = #updateTime:TIMESTAMP#,
+      express1 = #express1:VARCHAR#
+    where id = #id:INTEGER#
+  </update>
+</sqlMap>

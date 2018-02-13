@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_book_introduct" >
+  <resultMap id="BaseResultMap" class="com.biyao.book.model.BookIntroduct" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="book_name" property="bookName" jdbcType="VARCHAR" />
+    <result column="book_series" property="bookSeries" jdbcType="VARCHAR" />
+    <result column="book_author" property="bookAuthor" jdbcType="VARCHAR" />
+    <result column="book_type" property="bookType" jdbcType="VARCHAR" />
+    <result column="book_age" property="bookAge" jdbcType="VARCHAR" />
+    <result column="book_status" property="bookStatus" jdbcType="VARCHAR" />
+    <result column="book_comment" property="bookComment" jdbcType="VARCHAR" />
+    <result column="book_image" property="bookImage" jdbcType="VARCHAR" />
+    <result column="book_library" property="bookLibrary" jdbcType="VARCHAR" />
+    <result column="book_account" property="bookAccount" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="express1" property="express1" jdbcType="VARCHAR" />
+    <result column="express2" property="express2" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="t_book_introduct.Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$ #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <sql id="t_book_introduct.mysql_Pagination_Limit" >
+    <dynamic >
+      <isNotEmpty property="mysqlOffset" >
+        <isNotEmpty property="mysqlLength" >
+          <![CDATA[ limit #mysqlOffset# , #mysqlLength# ]]>
+        </isNotEmpty>
+      </isNotEmpty>
+    </dynamic>
+  </sql>
+  <sql id="t_book_introduct.Base_Column_List" >
+    id, book_name, book_series, book_author, book_type, book_age, book_status, book_comment, 
+    book_image, book_library, book_account, create_time, update_time, express1, express2
+  </sql>
+  <select id="t_book_introduct.selectByExample" resultMap="BaseResultMap" parameterClass="com.biyao.book.model.BookIntroductExample" >
+    select
+    <isParameterPresent >
+      <isEqual property="distinct" compareValue="true" >
+        distinct
+      </isEqual>
+    </isParameterPresent>
+    <include refid="t_book_introduct.Base_Column_List" />
+    from t_book_introduct
+    <isParameterPresent >
+      <include refid="t_book_introduct.Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+    <include refid="t_book_introduct.mysql_Pagination_Limit" />
+  </select>
+  <select id="t_book_introduct.selectByPrimaryKey" resultMap="BaseResultMap" parameterClass="com.biyao.book.model.BookIntroduct" >
+    select 
+    <include refid="t_book_introduct.Base_Column_List" />
+    from t_book_introduct
+    where id = #id:INTEGER#
+  </select>
+  <delete id="t_book_introduct.deleteByPrimaryKey" parameterClass="com.biyao.book.model.BookIntroduct" >
+    delete from t_book_introduct
+    where id = #id:INTEGER#
+  </delete>
+  <delete id="t_book_introduct.deleteByExample" parameterClass="com.biyao.book.model.BookIntroductExample" >
+    delete from t_book_introduct
+    <include refid="t_book_introduct.Example_Where_Clause" />
+  </delete>
+  <insert id="t_book_introduct.insert" parameterClass="com.biyao.book.model.BookIntroduct" >
+    insert into t_book_introduct (id, book_name, book_series, book_author, 
+      book_type, book_age, book_status, book_comment, 
+      book_image, book_library, book_account, create_time, 
+      update_time, express1, express2)
+    values (#id:INTEGER#, #bookName:VARCHAR#, #bookSeries:VARCHAR#, #bookAuthor:VARCHAR#, 
+      #bookType:VARCHAR#, #bookAge:VARCHAR#, #bookStatus:VARCHAR#, #bookComment:VARCHAR#, 
+      #bookImage:VARCHAR#, #bookLibrary:VARCHAR#, #bookAccount:VARCHAR#, #createTime:TIMESTAMP#, 
+      #updateTime:TIMESTAMP#, #express1:VARCHAR#, #express2:VARCHAR#)
+  </insert>
+  <insert id="t_book_introduct.insertSelective" parameterClass="com.biyao.book.model.BookIntroduct" >
+    insert into t_book_introduct
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="bookName" >
+        book_name
+      </isNotNull>
+      <isNotNull prepend="," property="bookSeries" >
+        book_series
+      </isNotNull>
+      <isNotNull prepend="," property="bookAuthor" >
+        book_author
+      </isNotNull>
+      <isNotNull prepend="," property="bookType" >
+        book_type
+      </isNotNull>
+      <isNotNull prepend="," property="bookAge" >
+        book_age
+      </isNotNull>
+      <isNotNull prepend="," property="bookStatus" >
+        book_status
+      </isNotNull>
+      <isNotNull prepend="," property="bookComment" >
+        book_comment
+      </isNotNull>
+      <isNotNull prepend="," property="bookImage" >
+        book_image
+      </isNotNull>
+      <isNotNull prepend="," property="bookLibrary" >
+        book_library
+      </isNotNull>
+      <isNotNull prepend="," property="bookAccount" >
+        book_account
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        update_time
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        express1
+      </isNotNull>
+      <isNotNull prepend="," property="express2" >
+        express2
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="bookName" >
+        #bookName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookSeries" >
+        #bookSeries:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookAuthor" >
+        #bookAuthor:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookType" >
+        #bookType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookAge" >
+        #bookAge:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookStatus" >
+        #bookStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookComment" >
+        #bookComment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookImage" >
+        #bookImage:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookLibrary" >
+        #bookLibrary:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookAccount" >
+        #bookAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        #updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        #express1:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="express2" >
+        #express2:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="t_book_introduct.countByExample" parameterClass="com.biyao.book.model.BookIntroductExample" resultClass="java.lang.Integer" >
+    select count(*) from t_book_introduct
+    <include refid="t_book_introduct.Example_Where_Clause" />
+  </select>
+  <update id="t_book_introduct.updateByExampleSelective" >
+    update t_book_introduct
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookName" >
+        book_name = #record.bookName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookSeries" >
+        book_series = #record.bookSeries:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookAuthor" >
+        book_author = #record.bookAuthor:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookType" >
+        book_type = #record.bookType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookAge" >
+        book_age = #record.bookAge:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookStatus" >
+        book_status = #record.bookStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookComment" >
+        book_comment = #record.bookComment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookImage" >
+        book_image = #record.bookImage:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookLibrary" >
+        book_library = #record.bookLibrary:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookAccount" >
+        book_account = #record.bookAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createTime" >
+        create_time = #record.createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.updateTime" >
+        update_time = #record.updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.express1" >
+        express1 = #record.express1:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.express2" >
+        express2 = #record.express2:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_book_introduct.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_book_introduct.updateByExample" >
+    update t_book_introduct
+    set id = #record.id:INTEGER#,
+      book_name = #record.bookName:VARCHAR#,
+      book_series = #record.bookSeries:VARCHAR#,
+      book_author = #record.bookAuthor:VARCHAR#,
+      book_type = #record.bookType:VARCHAR#,
+      book_age = #record.bookAge:VARCHAR#,
+      book_status = #record.bookStatus:VARCHAR#,
+      book_comment = #record.bookComment:VARCHAR#,
+      book_image = #record.bookImage:VARCHAR#,
+      book_library = #record.bookLibrary:VARCHAR#,
+      book_account = #record.bookAccount:VARCHAR#,
+      create_time = #record.createTime:TIMESTAMP#,
+      update_time = #record.updateTime:TIMESTAMP#,
+      express1 = #record.express1:VARCHAR#,
+      express2 = #record.express2:VARCHAR#
+    <isParameterPresent >
+      <include refid="t_book_introduct.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_book_introduct.updateByPrimaryKeySelective" parameterClass="com.biyao.book.model.BookIntroduct" >
+    update t_book_introduct
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="bookName" >
+        book_name = #bookName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookSeries" >
+        book_series = #bookSeries:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookAuthor" >
+        book_author = #bookAuthor:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookType" >
+        book_type = #bookType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookAge" >
+        book_age = #bookAge:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookStatus" >
+        book_status = #bookStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookComment" >
+        book_comment = #bookComment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookImage" >
+        book_image = #bookImage:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookLibrary" >
+        book_library = #bookLibrary:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="bookAccount" >
+        book_account = #bookAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time = #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        update_time = #updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="express1" >
+        express1 = #express1:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="express2" >
+        express2 = #express2:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:INTEGER#
+  </update>
+  <update id="t_book_introduct.updateByPrimaryKey" parameterClass="com.biyao.book.model.BookIntroduct" >
+    update t_book_introduct
+    set book_name = #bookName:VARCHAR#,
+      book_series = #bookSeries:VARCHAR#,
+      book_author = #bookAuthor:VARCHAR#,
+      book_type = #bookType:VARCHAR#,
+      book_age = #bookAge:VARCHAR#,
+      book_status = #bookStatus:VARCHAR#,
+      book_comment = #bookComment:VARCHAR#,
+      book_image = #bookImage:VARCHAR#,
+      book_library = #bookLibrary:VARCHAR#,
+      book_account = #bookAccount:VARCHAR#,
+      create_time = #createTime:TIMESTAMP#,
+      update_time = #updateTime:TIMESTAMP#,
+      express1 = #express1:VARCHAR#,
+      express2 = #express2:VARCHAR#
+    where id = #id:INTEGER#
+  </update>
+
+  <select id="t_book_introduct.searchBooks" resultMap="BaseResultMap" parameterClass="java.util.Map" >
+    select
+    <include refid="t_book_introduct.Base_Column_List" />
+    from t_book_introduct
+    where (book_name like '%$searchKey$%' or book_author like '%$searchKey$%' or book_series like '%$searchKey$%' or book_library like '%$searchKey$%')
+    <isNotNull prepend="and" property="account" >
+      book_account != #account#
+    </isNotNull>
+    order by create_time DESC
+    <include refid="t_book_introduct.mysql_Pagination_Limit" />
+  </select>
+
+  <select id="t_book_introduct.countBooks" resultClass="java.lang.Integer" parameterClass="java.util.Map" >
+    select count(*)
+    from t_book_introduct
+    where (book_name like '%$searchKey$%' or book_author like '%$searchKey$%' or book_series like '%$searchKey$%' or book_library like '%$searchKey$%')
+    <isNotNull prepend="and" property="account" >
+      book_account != #account#
+    </isNotNull>
+</select>
+</sqlMap>

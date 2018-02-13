@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_book_shopping" >
+  <resultMap id="BaseResultMap" class="com.biyao.book.model.BookShopping" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="book_id" property="bookId" jdbcType="INTEGER" />
+    <result column="book_account" property="bookAccount" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <resultMap id="BaseResultMap2" class="com.biyao.book.model.BookIntroduct" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="book_name" property="bookName" jdbcType="VARCHAR" />
+    <result column="book_series" property="bookSeries" jdbcType="VARCHAR" />
+    <result column="book_author" property="bookAuthor" jdbcType="VARCHAR" />
+    <result column="book_type" property="bookType" jdbcType="VARCHAR" />
+    <result column="book_age" property="bookAge" jdbcType="VARCHAR" />
+    <result column="book_status" property="bookStatus" jdbcType="VARCHAR" />
+    <result column="book_comment" property="bookComment" jdbcType="VARCHAR" />
+    <result column="book_image" property="bookImage" jdbcType="VARCHAR" />
+    <result column="book_library" property="bookLibrary" jdbcType="VARCHAR" />
+    <result column="book_account" property="bookAccount" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="express1" property="express1" jdbcType="VARCHAR" />
+    <result column="express2" property="express2" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="t_book_shopping.Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$ #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <sql id="t_book_shopping.mysql_Pagination_Limit" >
+    <dynamic >
+      <isNotEmpty property="mysqlOffset" >
+        <isNotEmpty property="mysqlLength" >
+          <![CDATA[ limit #mysqlOffset# , #mysqlLength# ]]>
+        </isNotEmpty>
+      </isNotEmpty>
+    </dynamic>
+  </sql>
+  <sql id="t_book_shopping.Base_Column_List" >
+    id, book_id, book_account, create_time, update_time, status
+  </sql>
+  <select id="t_book_shopping.selectByExample" resultMap="BaseResultMap" parameterClass="com.biyao.book.model.BookShoppingExample" >
+    select
+    <isParameterPresent >
+      <isEqual property="distinct" compareValue="true" >
+        distinct
+      </isEqual>
+    </isParameterPresent>
+    <include refid="t_book_shopping.Base_Column_List" />
+    from t_book_shopping
+    <isParameterPresent >
+      <include refid="t_book_shopping.Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+    <include refid="t_book_shopping.mysql_Pagination_Limit" />
+  </select>
+  <select id="t_book_shopping.selectByPrimaryKey" resultMap="BaseResultMap" parameterClass="com.biyao.book.model.BookShopping" >
+    select 
+    <include refid="t_book_shopping.Base_Column_List" />
+    from t_book_shopping
+    where id = #id:INTEGER#
+  </select>
+  <delete id="t_book_shopping.deleteByPrimaryKey" parameterClass="com.biyao.book.model.BookShopping" >
+    delete from t_book_shopping
+    where id = #id:INTEGER#
+  </delete>
+  <delete id="t_book_shopping.deleteByExample" parameterClass="com.biyao.book.model.BookShoppingExample" >
+    delete from t_book_shopping
+    <include refid="t_book_shopping.Example_Where_Clause" />
+  </delete>
+  <insert id="t_book_shopping.insert" parameterClass="com.biyao.book.model.BookShopping" >
+    insert into t_book_shopping (id, book_id, book_account, create_time, 
+      update_time, status)
+    values (#id:INTEGER#, #bookId:INTEGER#, #bookAccount:VARCHAR#, #createTime:TIMESTAMP#, 
+      #updateTime:TIMESTAMP#, #status:VARCHAR#)
+  </insert>
+  <insert id="t_book_shopping.insertSelective" parameterClass="com.biyao.book.model.BookShopping" >
+    insert into t_book_shopping
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="bookId" >
+        book_id
+      </isNotNull>
+      <isNotNull prepend="," property="bookAccount" >
+        book_account
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        update_time
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        status
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="bookId" >
+        #bookId:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="bookAccount" >
+        #bookAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        #updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        #status:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="t_book_shopping.countByExample" parameterClass="com.biyao.book.model.BookShoppingExample" resultClass="java.lang.Integer" >
+    select count(*) from t_book_shopping
+    <include refid="t_book_shopping.Example_Where_Clause" />
+  </select>
+  <update id="t_book_shopping.updateByExampleSelective" >
+    update t_book_shopping
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookId" >
+        book_id = #record.bookId:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.bookAccount" >
+        book_account = #record.bookAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createTime" >
+        create_time = #record.createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.updateTime" >
+        update_time = #record.updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.status" >
+        status = #record.status:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_book_shopping.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_book_shopping.updateByExample" >
+    update t_book_shopping
+    set id = #record.id:INTEGER#,
+      book_id = #record.bookId:INTEGER#,
+      book_account = #record.bookAccount:VARCHAR#,
+      create_time = #record.createTime:TIMESTAMP#,
+      update_time = #record.updateTime:TIMESTAMP#,
+      status = #record.status:VARCHAR#
+    <isParameterPresent >
+      <include refid="t_book_shopping.Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="t_book_shopping.updateByPrimaryKeySelective" parameterClass="com.biyao.book.model.BookShopping" >
+    update t_book_shopping
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="bookId" >
+        book_id = #bookId:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="bookAccount" >
+        book_account = #bookAccount:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time = #createTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updateTime" >
+        update_time = #updateTime:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        status = #status:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:INTEGER#
+  </update>
+  <update id="t_book_shopping.updateByPrimaryKey" parameterClass="com.biyao.book.model.BookShopping" >
+    update t_book_shopping
+    set book_id = #bookId:INTEGER#,
+      book_account = #bookAccount:VARCHAR#,
+      create_time = #createTime:TIMESTAMP#,
+      update_time = #updateTime:TIMESTAMP#,
+      status = #status:VARCHAR#
+    where id = #id:INTEGER#
+  </update>
+
+  <select id="t_book_shopping.selectShopping" resultClass="java.util.HashMap" parameterClass="java.lang.String" >
+    SELECT s.id shopId,i.*
+    FROM t_book_shopping s LEFT JOIN t_book_introduct i
+    on s.book_id = i.id
+    where s.book_account = #bookAccount#
+    ORDER BY s.create_time DESC
+  </select>
+
+  <select id="t_book_shopping.collectShopping" resultClass="java.util.HashMap" parameterClass="java.util.Map" >
+    SELECT s.id shopId,i.id,i.book_name,i.book_series,i.book_author,i.book_type,i.book_age,i.book_status,i.book_account
+    FROM t_book_shopping s LEFT JOIN t_book_introduct i
+    on s.book_id = i.id
+    where s.book_account = #bookAccount# and s.id in ($ids$)
+    ORDER BY i.book_account,s.create_time DESC
+</select>
+</sqlMap>
