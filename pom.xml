@@ -21,7 +21,7 @@
 		<spring.version>4.2.4.RELEASE</spring.version>
 		<protostuff.version>1.0.8</protostuff.version>
 		<jedis.version>2.7.2</jedis.version>
-		<collections.version>3.2</collections.version>
+		<collections.version>3.2.2</collections.version>
 		<surefire.version>2.12.4</surefire.version>
 		<ibatis.version>2.3.4.726</ibatis.version>
 		<orm.version>3.2.18.RELEASE</orm.version>
